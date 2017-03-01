@@ -124,6 +124,29 @@
             float: left;
             margin-left: 20px;
             margin-top: 50px;
+            .texts {
+              margin-left: 10px;
+              span {
+                display: block;
+                font-size: 18px;
+                font-family: "Microsoft Yahei";
+                color: #108dc7;
+                line-height: 32px;
+              }
+            }
+            .buys {
+              width: 416px;
+              height: 80px;
+              background-color: #ffe9af;
+              font-size: 18px;
+              font-family: "Microsoft Yahei";
+              color: #108dc7;
+
+              .single,.suit {
+                line-height: 40px;
+                text-align: center;
+              }
+            }
           }
           .details-pics {
             float: right;

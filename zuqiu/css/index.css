@@ -202,6 +202,24 @@ i {
           float: left;
           margin-left: 20px;
           margin-top: 50px; }
+          .mWrap .mainWrap .tickets .content .details .details-desc .texts {
+            margin-left: 10px; }
+            .mWrap .mainWrap .tickets .content .details .details-desc .texts span {
+              display: block;
+              font-size: 18px;
+              font-family: "Microsoft Yahei";
+              color: #108dc7;
+              line-height: 32px; }
+          .mWrap .mainWrap .tickets .content .details .details-desc .buys {
+            width: 416px;
+            height: 80px;
+            background-color: #ffe9af;
+            font-size: 18px;
+            font-family: "Microsoft Yahei";
+            color: #108dc7; }
+            .mWrap .mainWrap .tickets .content .details .details-desc .buys .single, .mWrap .mainWrap .tickets .content .details .details-desc .buys .suit {
+              line-height: 40px;
+              text-align: center; }
         .mWrap .mainWrap .tickets .content .details .details-pics {
           float: right;
           width: 366px;
