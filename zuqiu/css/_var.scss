@@ -1,0 +1,31 @@
+@charset "UTF-8";
+/*author:rory chou;time:2016.3.1*/
+
+/* CSS Document */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,select,textarea,p,blockquote,th,td,hr,button,figure,menu{margin:0;padding:0;}
+body{font:12px/22px Tahoma,Arial,\5b8b\4f53,sans-serif;}
+body{ min-width:1000px}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+table{border-collapse:collapse;border-spacing:0;}
+ol,ul{list-style:none;}
+a img{border:none; vertical-align:top;}
+input,button{ font-family:Tahoma,Verdana,Geneva,sans-serif}
+a{ text-decoration:none;}a:hover{ text-decoration: underline;}
+i{ font-style:normal;}
+.clearfix { *zoom: 1; }
+.clearfix:after { content: "\0020"; display: block; height: 0; clear: both; overflow: hidden; visibility: hidden; }
+
+
+
+
+
+/*底部活动*/
+.main_b{ width:100%; background:#FFF; padding:20px 0; margin-bottom:-20px;}
+.hd_title{ position:relative; width:991px; margin:0 auto; height:30px; line-height:30px; font-size:18px;}
+.hd_title p{ height:15px; border-bottom:#CCC solid 1px;}
+.hd_title h3{ font-family:"微软雅黑"; position:absolute; left:50%; margin-left:-105px; width:210px; top:0; line-height:30px; text-align:center; background:#FFF;}
+.hd_list{ width:981px; padding:10px 0 0 10px; margin:0 auto; overflow:hidden; zoom:1; *padding:10px 0 20px 10px;}
+.hd_list li{ float:left; margin:9px; display:inline;}
+.hd_list li img{ display:block;}
+.ztfooter{ width:980px; overflow:hidden; margin:0 auto; text-align:center; color:#666; line-height:18px; padding:25px 0 10px 0;}
+

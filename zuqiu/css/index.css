@@ -1,0 +1,211 @@
+@charset "UTF-8";
+/*author:rory chou;time:2016.3.1*/
+/* CSS Document */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, select, textarea, p, blockquote, th, td, hr, button, figure, menu {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font: 12px/22px Tahoma,Arial,\5b8b\4f53,sans-serif; }
+
+body {
+  min-width: 1000px; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+ol, ul {
+  list-style: none; }
+
+a img {
+  border: none;
+  vertical-align: top; }
+
+input, button {
+  font-family: Tahoma,Verdana,Geneva,sans-serif; }
+
+a {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+i {
+  font-style: normal; }
+
+.clearfix {
+  *zoom: 1; }
+
+.clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden; }
+
+/*底部活动*/
+.main_b {
+  width: 100%;
+  background: #FFF;
+  padding: 20px 0;
+  margin-bottom: -20px; }
+
+.hd_title {
+  position: relative;
+  width: 991px;
+  margin: 0 auto;
+  height: 30px;
+  line-height: 30px;
+  font-size: 18px; }
+
+.hd_title p {
+  height: 15px;
+  border-bottom: #CCC solid 1px; }
+
+.hd_title h3 {
+  font-family: "微软雅黑";
+  position: absolute;
+  left: 50%;
+  margin-left: -105px;
+  width: 210px;
+  top: 0;
+  line-height: 30px;
+  text-align: center;
+  background: #FFF; }
+
+.hd_list {
+  width: 981px;
+  padding: 10px 0 0 10px;
+  margin: 0 auto;
+  overflow: hidden;
+  zoom: 1;
+  *padding: 10px 0 20px 10px; }
+
+.hd_list li {
+  float: left;
+  margin: 9px;
+  display: inline; }
+
+.hd_list li img {
+  display: block; }
+
+.ztfooter {
+  width: 980px;
+  overflow: hidden;
+  margin: 0 auto;
+  text-align: center;
+  color: #666;
+  line-height: 18px;
+  padding: 25px 0 10px 0; }
+
+.mWrap {
+  position: relative;
+  overflow: hidden; }
+  .mWrap img {
+    display: block;
+    width: 100%; }
+  .mWrap .background {
+    position: absolute;
+    top: 0;
+    z-index: -1; }
+  .mWrap .mainWrap {
+    width: 1000px;
+    margin: 0 auto; }
+    .mWrap .mainWrap .banners {
+      margin-bottom: 30px; }
+      .mWrap .mainWrap .banners .banner1, .mWrap .mainWrap .banners .banner2 {
+        float: left;
+        -overflow: hidden;
+        width: 558px;
+        height: 304px;
+        border: 3px solid #fff;
+        padding: 15px 16px; }
+      .mWrap .mainWrap .banners .banner2 {
+        float: right;
+        width: 334px; }
+        .mWrap .mainWrap .banners .banner2 .banner-wrapper {
+          position: relative; }
+          .mWrap .mainWrap .banners .banner2 .banner-wrapper .flag {
+            position: absolute;
+            right: -8px;
+            top: -30px;
+            width: 70px;
+            height: 104px;
+            background: url("../images/flag.png") no-repeat center; }
+            .mWrap .mainWrap .banners .banner2 .banner-wrapper .flag .words {
+              display: block;
+              margin-top: 13px;
+              margin-left: 10px;
+              line-height: 28px;
+              font-size: 24px;
+              color: #fff;
+              font-weight: 900;
+              font-family: "Microsoft Yahei"; }
+    .mWrap .mainWrap .tickets .title {
+      position: relative;
+      height: 90px; }
+      .mWrap .mainWrap .tickets .title .title-words {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -296.5px;
+        margin-top: -36px;
+        display: block;
+        background: url("../images/title.png") no-repeat center;
+        width: 593px;
+        height: 72px;
+        line-height: 60px;
+        text-align: center;
+        font-size: 42px;
+        font-family: "Microsoft Yahei";
+        color: #fff;
+        font-weight: 900; }
+    .mWrap .mainWrap .tickets .content {
+      height: 334px;
+      background-color: #fff;
+      position: relative; }
+      .mWrap .mainWrap .tickets .content .tabs {
+        text-align: center;
+        position: absolute;
+        z-index: 10;
+        top: 36px;
+        width: 100%; }
+        .mWrap .mainWrap .tickets .content .tabs .tabs-wrapper {
+          background-color: #fff;
+          display: inline-block; }
+          .mWrap .mainWrap .tickets .content .tabs .tabs-wrapper .tabs-desc {
+            display: inline-block;
+            height: 42px;
+            width: 130px;
+            background-color: #ffe9af;
+            text-align: center;
+            margin: 0 8px; }
+            .mWrap .mainWrap .tickets .content .tabs .tabs-wrapper .tabs-desc span {
+              color: #c94c16;
+              display: block;
+              font-size: 16px;
+              font-weight: 300; }
+      .mWrap .mainWrap .tickets .content .details {
+        position: absolute;
+        top: 58px;
+        left: 50%;
+        margin-left: -462px;
+        width: 924px;
+        height: 256px;
+        border: 2px solid #ffe9ad; }
+        .mWrap .mainWrap .tickets .content .details .details-desc {
+          float: left;
+          margin-left: 20px;
+          margin-top: 50px; }
+        .mWrap .mainWrap .tickets .content .details .details-pics {
+          float: right;
+          width: 366px;
+          height: 200px;
+          margin-right: 20px; }
+
+/*# sourceMappingURL=index.css.map */

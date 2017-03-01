@@ -1,0 +1,138 @@
+@charset "UTF-8";
+
+@import "var";
+
+
+
+
+.mWrap {
+  position: relative;
+  overflow: hidden;
+  img {
+    display: block;
+    width: 100%;
+  }
+  .header {
+
+  }
+  .background {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+  .mainWrap {
+    width: 1000px;
+    margin: 0 auto;
+    .banners {
+      margin-bottom: 30px;
+      .banner1 {
+        float: left;
+        -overflow: hidden;
+        width: 558px;
+        height: 304px;
+        border: 3px solid #fff;
+        padding: 15px 16px;
+      }
+      .banner2 {
+        @extend .banner1;
+        float: right;
+        width: 334px;
+        .banner-wrapper {
+          position: relative;
+          .flag {
+            position: absolute;
+            right: -8px;
+            top: -30px;
+            width: 70px;
+            height: 104px;
+            background: url("../images/flag.png") no-repeat center;
+            .words {
+              display: block;
+              margin-top: 13px;
+              margin-left: 10px;
+              line-height: 28px;
+              font-size: 24px;
+              color: #fff;
+              font-weight: 900;
+              font-family: "Microsoft Yahei";
+            }
+          }
+        }
+
+      }
+    }
+    .tickets {
+      .title {
+        position: relative;
+        height: 90px;
+        .title-words {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          margin-left: -(593px/2);
+          margin-top: -(72px/2);
+          display: block;
+          background: url("../images/title.png") no-repeat center;
+          width: 593px;
+          height: 72px;
+          line-height: 60px;
+          text-align: center;
+          font-size: 42px;
+          font-family: "Microsoft Yahei";
+          color: #fff;
+          font-weight: 900;
+        }
+      }
+      .content {
+        height: 334px;
+        background-color: #fff;
+        position: relative;
+        .tabs {
+          text-align: center;
+          position: absolute;
+          z-index: 10;
+          top: 36px;
+          width: 100%;
+          .tabs-wrapper {
+            background-color: #fff;
+            display: inline-block;
+            .tabs-desc {
+              display: inline-block;
+              height: 42px;
+              width: 130px;
+              background-color: #ffe9af;
+              text-align: center;
+              margin: 0 8px;
+              span {
+                color: #c94c16;
+                display: block;
+                font-size: 16px;
+                font-weight: 300;
+              }
+            }
+          }
+        }
+        .details {
+          position: absolute;
+          top: 58px;
+          left: 50%;
+          margin-left: -(924px/2);
+          width: 924px;
+          height: 256px;
+          border: 2px solid #ffe9ad;
+          .details-desc {
+            float: left;
+            margin-left: 20px;
+            margin-top: 50px;
+          }
+          .details-pics {
+            float: right;
+            width: 366px;
+            height: 200px;
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+  }
+}
