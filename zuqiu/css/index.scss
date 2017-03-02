@@ -143,8 +143,18 @@
               color: #108dc7;
 
               .single,.suit {
+                width: 388px;
+                margin: 0 auto;
                 line-height: 40px;
-                text-align: center;
+                background: url("../images/dot.jpg") repeat-x center;
+                span {
+                  float: left;
+                  background-color: #ffe9af;
+                }
+                a {
+                  float: right;
+                  margin-top: 6px;
+                }
               }
             }
           }

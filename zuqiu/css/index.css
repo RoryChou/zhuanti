@@ -218,8 +218,16 @@ i {
             font-family: "Microsoft Yahei";
             color: #108dc7; }
             .mWrap .mainWrap .tickets .content .details .details-desc .buys .single, .mWrap .mainWrap .tickets .content .details .details-desc .buys .suit {
+              width: 388px;
+              margin: 0 auto;
               line-height: 40px;
-              text-align: center; }
+              background: url("../images/dot.jpg") repeat-x center; }
+              .mWrap .mainWrap .tickets .content .details .details-desc .buys .single span, .mWrap .mainWrap .tickets .content .details .details-desc .buys .suit span {
+                float: left;
+                background-color: #ffe9af; }
+              .mWrap .mainWrap .tickets .content .details .details-desc .buys .single a, .mWrap .mainWrap .tickets .content .details .details-desc .buys .suit a {
+                float: right;
+                margin-top: 6px; }
         .mWrap .mainWrap .tickets .content .details .details-pics {
           float: right;
           width: 366px;
