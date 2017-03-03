@@ -37,16 +37,19 @@ a:hover {
 i {
   font-style: normal; }
 
-.clearfix {
+.clearfix, .mWrap .mainWrap .swiper-container .swiper-wrapper {
   *zoom: 1; }
 
-.clearfix:after {
+.clearfix:after, .mWrap .mainWrap .swiper-container .swiper-wrapper:after {
   content: "\0020";
   display: block;
   height: 0;
   clear: both;
   overflow: hidden;
   visibility: hidden; }
+
+.pointer {
+  cursor: pointer; }
 
 /*底部活动*/
 .main_b {
@@ -115,7 +118,10 @@ i {
     z-index: -1; }
   .mWrap .mainWrap {
     width: 1000px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    /*公用title*/
+    /*公用title END*/
+    /*公用swiper样式*/ }
     .mWrap .mainWrap .banners {
       margin-bottom: 30px; }
       .mWrap .mainWrap .banners .banner1, .mWrap .mainWrap .banners .banner2 {
@@ -136,7 +142,8 @@ i {
             top: -30px;
             width: 70px;
             height: 104px;
-            background: url("../images/flag.png") no-repeat center; }
+            background: url("../images/flag.png") no-repeat center;
+            z-index: 10; }
             .mWrap .mainWrap .banners .banner2 .banner-wrapper .flag .words {
               display: block;
               margin-top: 13px;
@@ -146,10 +153,10 @@ i {
               color: #fff;
               font-weight: 900;
               font-family: "Microsoft Yahei"; }
-    .mWrap .mainWrap .tickets .title {
+    .mWrap .mainWrap .title {
       position: relative;
       height: 90px; }
-      .mWrap .mainWrap .tickets .title .title-words {
+      .mWrap .mainWrap .title .title-words {
         position: absolute;
         left: 50%;
         top: 50%;
@@ -165,73 +172,192 @@ i {
         font-family: "Microsoft Yahei";
         color: #fff;
         font-weight: 900; }
-    .mWrap .mainWrap .tickets .content {
-      height: 334px;
-      background-color: #fff;
+    .mWrap .mainWrap .swiper-container {
+      overflow: hidden;
       position: relative; }
-      .mWrap .mainWrap .tickets .content .tabs {
-        text-align: center;
+      .mWrap .mainWrap .swiper-container .btn-r, .mWrap .mainWrap .swiper-container .btn-l {
         position: absolute;
-        z-index: 10;
-        top: 36px;
-        width: 100%; }
-        .mWrap .mainWrap .tickets .content .tabs .tabs-wrapper {
-          background-color: #fff;
-          display: inline-block; }
-          .mWrap .mainWrap .tickets .content .tabs .tabs-wrapper .tabs-desc {
-            display: inline-block;
-            height: 42px;
-            width: 130px;
-            background-color: #ffe9af;
-            text-align: center;
-            margin: 0 8px; }
-            .mWrap .mainWrap .tickets .content .tabs .tabs-wrapper .tabs-desc span {
-              color: #c94c16;
-              display: block;
-              font-size: 16px;
-              font-weight: 300; }
-      .mWrap .mainWrap .tickets .content .details {
-        position: absolute;
-        top: 58px;
-        left: 50%;
-        margin-left: -462px;
-        width: 924px;
-        height: 256px;
-        border: 2px solid #ffe9ad; }
-        .mWrap .mainWrap .tickets .content .details .details-desc {
-          float: left;
-          margin-left: 20px;
-          margin-top: 50px; }
-          .mWrap .mainWrap .tickets .content .details .details-desc .texts {
-            margin-left: 10px; }
-            .mWrap .mainWrap .tickets .content .details .details-desc .texts span {
-              display: block;
+        top: 50%;
+        right: 0;
+        background: url("../images/btn-r.png") no-repeat center;
+        width: 38px;
+        height: 38px;
+        margin-top: -19px;
+        opacity: 0.6; }
+        .mWrap .mainWrap .swiper-container .btn-r:hover, .mWrap .mainWrap .swiper-container .btn-l:hover {
+          opacity: 0.8; }
+      .mWrap .mainWrap .swiper-container .btn-l {
+        left: 0;
+        background: url("../images/btn-l.png") no-repeat center; }
+      .mWrap .mainWrap .swiper-container .swiper-wrapper .swiper-slide {
+        float: left; }
+    .mWrap .mainWrap .tickets {
+      margin-bottom: 12px; }
+      .mWrap .mainWrap .tickets .content {
+        height: 334px;
+        background-color: #fff;
+        position: relative; }
+        .mWrap .mainWrap .tickets .content .tabs {
+          text-align: center;
+          position: absolute;
+          z-index: 10;
+          top: 36px;
+          width: 100%; }
+          .mWrap .mainWrap .tickets .content .tabs .tabs-wrapper {
+            background-color: #fff;
+            display: inline-block; }
+            .mWrap .mainWrap .tickets .content .tabs .tabs-wrapper .tabs-desc {
+              display: inline-block;
+              height: 42px;
+              width: 130px;
+              background-color: #ffe9af;
+              text-align: center;
+              margin: 0 8px; }
+              .mWrap .mainWrap .tickets .content .tabs .tabs-wrapper .tabs-desc:hover, .mWrap .mainWrap .tickets .content .tabs .tabs-wrapper .tabs-desc.active {
+                background-color: #ffbe23; }
+                .mWrap .mainWrap .tickets .content .tabs .tabs-wrapper .tabs-desc:hover span, .mWrap .mainWrap .tickets .content .tabs .tabs-wrapper .tabs-desc.active span {
+                  color: #fff; }
+              .mWrap .mainWrap .tickets .content .tabs .tabs-wrapper .tabs-desc span {
+                color: #c94c16;
+                display: block;
+                font-size: 16px;
+                font-weight: 300; }
+        .mWrap .mainWrap .tickets .content .details {
+          position: absolute;
+          top: 58px;
+          left: 50%;
+          margin-left: -462px;
+          width: 924px;
+          height: 256px;
+          border: 2px solid #ffe9ad;
+          display: none; }
+          .mWrap .mainWrap .tickets .content .details.active {
+            display: block; }
+          .mWrap .mainWrap .tickets .content .details .details-desc {
+            float: left;
+            margin-left: 20px;
+            margin-top: 50px; }
+            .mWrap .mainWrap .tickets .content .details .details-desc .texts {
+              margin-left: 10px; }
+              .mWrap .mainWrap .tickets .content .details .details-desc .texts span {
+                display: block;
+                font-size: 18px;
+                font-family: "Microsoft Yahei";
+                color: #108dc7;
+                line-height: 32px; }
+            .mWrap .mainWrap .tickets .content .details .details-desc .buys {
+              width: 416px;
+              height: 80px;
+              background-color: #ffe9af;
               font-size: 18px;
               font-family: "Microsoft Yahei";
-              color: #108dc7;
-              line-height: 32px; }
-          .mWrap .mainWrap .tickets .content .details .details-desc .buys {
-            width: 416px;
-            height: 80px;
-            background-color: #ffe9af;
-            font-size: 18px;
-            font-family: "Microsoft Yahei";
-            color: #108dc7; }
-            .mWrap .mainWrap .tickets .content .details .details-desc .buys .single, .mWrap .mainWrap .tickets .content .details .details-desc .buys .suit {
-              width: 388px;
-              margin: 0 auto;
-              line-height: 40px;
-              background: url("../images/dot.jpg") repeat-x center; }
-              .mWrap .mainWrap .tickets .content .details .details-desc .buys .single span, .mWrap .mainWrap .tickets .content .details .details-desc .buys .suit span {
-                float: left;
-                background-color: #ffe9af; }
-              .mWrap .mainWrap .tickets .content .details .details-desc .buys .single a, .mWrap .mainWrap .tickets .content .details .details-desc .buys .suit a {
-                float: right;
-                margin-top: 6px; }
-        .mWrap .mainWrap .tickets .content .details .details-pics {
-          float: right;
-          width: 366px;
-          height: 200px;
-          margin-right: 20px; }
+              color: #108dc7; }
+              .mWrap .mainWrap .tickets .content .details .details-desc .buys .single, .mWrap .mainWrap .tickets .content .details .details-desc .buys .suit {
+                width: 388px;
+                margin: 0 auto;
+                line-height: 40px;
+                background: url("../images/dot.jpg") repeat-x center; }
+                .mWrap .mainWrap .tickets .content .details .details-desc .buys .single span, .mWrap .mainWrap .tickets .content .details .details-desc .buys .suit span {
+                  float: left;
+                  background-color: #ffe9af; }
+                .mWrap .mainWrap .tickets .content .details .details-desc .buys .single .btn-buy, .mWrap .mainWrap .tickets .content .details .details-desc .buys .suit .btn-buy {
+                  float: right;
+                  background-color: #ff9e2a;
+                  width: 74px;
+                  height: 28px;
+                  line-height: 28px;
+                  text-align: center;
+                  margin-top: 6px;
+                  color: #fff;
+                  font-family: "Microsoft Yahei";
+                  border-radius: 14px; }
+                  .mWrap .mainWrap .tickets .content .details .details-desc .buys .single .btn-buy:hover, .mWrap .mainWrap .tickets .content .details .details-desc .buys .suit .btn-buy:hover {
+                    background-color: #de2aff; }
+          .mWrap .mainWrap .tickets .content .details .details-pics {
+            float: right;
+            width: 366px;
+            height: 200px;
+            margin-right: 20px;
+            margin-top: 36px;
+            border: 5px solid #ffe9ad; }
+    .mWrap .mainWrap .wuhan, .mWrap .mainWrap .kechang {
+      margin-bottom: 12px; }
+      .mWrap .mainWrap .wuhan .content .tabs, .mWrap .mainWrap .kechang .content .tabs {
+        text-align: center; }
+        .mWrap .mainWrap .wuhan .content .tabs .tabs-desc, .mWrap .mainWrap .kechang .content .tabs .tabs-desc {
+          display: inline-block;
+          width: 112px;
+          height: 32px;
+          border-radius: 10px;
+          margin: 10px;
+          background-color: #4b9fe5;
+          color: #fff;
+          text-align: center;
+          line-height: 32px;
+          font-size: 16px;
+          font-family: "Microsoft Yahei"; }
+          .mWrap .mainWrap .wuhan .content .tabs .tabs-desc:hover, .mWrap .mainWrap .kechang .content .tabs .tabs-desc:hover, .mWrap .mainWrap .wuhan .content .tabs .tabs-desc.active, .mWrap .mainWrap .kechang .content .tabs .tabs-desc.active {
+            background-color: #9d7ffd; }
+      .mWrap .mainWrap .wuhan .content .details, .mWrap .mainWrap .kechang .content .details {
+        display: none; }
+        .mWrap .mainWrap .wuhan .content .details.active, .mWrap .mainWrap .kechang .content .details.active {
+          display: block; }
+        .mWrap .mainWrap .wuhan .content .details .lists, .mWrap .mainWrap .kechang .content .details .lists {
+          margin-left: -6px; }
+          .mWrap .mainWrap .wuhan .content .details .lists .product, .mWrap .mainWrap .kechang .content .details .lists .product {
+            float: left;
+            width: 233px;
+            padding: 6px;
+            background-color: #fff;
+            margin-left: 6px;
+            margin-top: 6px;
+            transition: all 0.3s linear 0s; }
+            .mWrap .mainWrap .wuhan .content .details .lists .product:hover, .mWrap .mainWrap .kechang .content .details .lists .product:hover {
+              transform: translateY(-5px); }
+            .mWrap .mainWrap .wuhan .content .details .lists .product a, .mWrap .mainWrap .kechang .content .details .lists .product a {
+              display: block;
+              position: relative; }
+              .mWrap .mainWrap .wuhan .content .details .lists .product a img, .mWrap .mainWrap .kechang .content .details .lists .product a img {
+                width: 233px;
+                height: 144px; }
+              .mWrap .mainWrap .wuhan .content .details .lists .product a .pro-desc, .mWrap .mainWrap .kechang .content .details .lists .product a .pro-desc {
+                padding: 4px; }
+                .mWrap .mainWrap .wuhan .content .details .lists .product a .pro-desc span, .mWrap .mainWrap .kechang .content .details .lists .product a .pro-desc span {
+                  display: block;
+                  line-height: 18px;
+                  font-size: 16px;
+                  color: #333; }
+              .mWrap .mainWrap .wuhan .content .details .lists .product a .pro-bottom, .mWrap .mainWrap .kechang .content .details .lists .product a .pro-bottom {
+                padding: 4px 10px; }
+                .mWrap .mainWrap .wuhan .content .details .lists .product a .pro-bottom .pro-price, .mWrap .mainWrap .kechang .content .details .lists .product a .pro-bottom .pro-price {
+                  color: #ff6302;
+                  float: left; }
+                  .mWrap .mainWrap .wuhan .content .details .lists .product a .pro-bottom .pro-price .rmb, .mWrap .mainWrap .kechang .content .details .lists .product a .pro-bottom .pro-price .rmb, .mWrap .mainWrap .wuhan .content .details .lists .product a .pro-bottom .pro-price .qi, .mWrap .mainWrap .kechang .content .details .lists .product a .pro-bottom .pro-price .qi {
+                    font-size: 14px; }
+                  .mWrap .mainWrap .wuhan .content .details .lists .product a .pro-bottom .pro-price .price, .mWrap .mainWrap .kechang .content .details .lists .product a .pro-bottom .pro-price .price {
+                    font-size: 24px; }
+                .mWrap .mainWrap .wuhan .content .details .lists .product a .pro-bottom .buy-btn, .mWrap .mainWrap .kechang .content .details .lists .product a .pro-bottom .buy-btn {
+                  width: 90px;
+                  height: 28px;
+                  float: right;
+                  background-color: #ff9400;
+                  line-height: 28px;
+                  text-align: center;
+                  font-family: "Microsoft Yahei";
+                  color: #fff;
+                  font-size: 16px;
+                  border-radius: 14px; }
+                  .mWrap .mainWrap .wuhan .content .details .lists .product a .pro-bottom .buy-btn:hover, .mWrap .mainWrap .kechang .content .details .lists .product a .pro-bottom .buy-btn:hover {
+                    background-color: #da2af7; }
+              .mWrap .mainWrap .wuhan .content .details .lists .product a .discount, .mWrap .mainWrap .kechang .content .details .lists .product a .discount {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 26px;
+                width: 92px;
+                background-color: #ffee66;
+                color: #f36302;
+                line-height: 26px;
+                text-align: center; }
 
 /*# sourceMappingURL=index.css.map */

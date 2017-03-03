@@ -14,7 +14,9 @@ a{ text-decoration:none;}a:hover{ text-decoration: underline;}
 i{ font-style:normal;}
 .clearfix { *zoom: 1; }
 .clearfix:after { content: "\0020"; display: block; height: 0; clear: both; overflow: hidden; visibility: hidden; }
-
+.pointer {
+  cursor: pointer;
+}
 
 
 
