@@ -170,3 +170,4 @@ $(function(){
         btnR:$('.tickets .active .btn-r')
     });
 });
+

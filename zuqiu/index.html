@@ -38,11 +38,13 @@
 	<div class="mainWrap">
 		<!--可配置轮播图-->
 		<div class="banners clearfix">
+			<!--厉兵秣马-->
 			<div class="banner1 ">
 				<div class="banner-wrapper swiper-container">
 					<div class="btn-l pointer"></div>
 					<div class="btn-r pointer"></div>
 					<ul class="imgs swiper-wrapper">
+						<!--循环开始-->
 						<li class="swiper-slide">
 							<a href="javascript:;">
 								<img src="images/b1.png" alt="">
@@ -63,9 +65,13 @@
 								<img src="images/b1.png" alt="">
 							</a>
 						</li>
+						<!--循环END-->
 					</ul>
 				</div>
 			</div>
+			<!--厉兵秣马END-->
+
+			<!--中甲联赛-->
 			<div class="banner2">
 				<div class="banner-wrapper">
 					<div class="flag">
@@ -75,6 +81,7 @@
 						<div class="btn-l pointer"></div>
 						<div class="btn-r pointer"></div>
 						<ul class="imgs swiper-wrapper">
+							<!--循环开始-->
 							<li class="swiper-slide">
 								<a href="javascript:;">
 									<img src="images/banner2.jpg" alt="">
@@ -95,11 +102,13 @@
 									<img src="images/banner2.jpg" alt="">
 								</a>
 							</li>
+							<!--循环END-->
 						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
+		<!--中甲联赛END-->
 		<!--可配置轮播图END-->
 
 		<!--球票在手，激动一宿-->
@@ -111,7 +120,7 @@
 			</div>
 			<div class="content">
 				<div class="tabs">
-					<div class="tabs-wrapper">
+					<span class="tabs-wrapper">
 						<span class="tabs-desc pointer">
 							<span class="date">2017.03.11</span>
 							<span class="time">19:00</span>
@@ -132,7 +141,7 @@
 							<span class="date">2017.03.11</span>
 							<span class="time">19:00</span>
 						</span>
-					</div>
+					</span>
 				</div>
 				<div class="details">
 					<div class="details-desc">
@@ -1703,5 +1712,13 @@
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="http://pic.lvmama.com/js/common/losc.js"></script>
 <script src="http://pic.lvmama.com/styles/zt/000global/js/eventCM.js" type="text/javascript"></script>
+<script>
+    var losc = '?losc=135243&ict=i'; //losc代码；
+    var box = '.mWrap a'; //需要添加losc的a标签的class名；
+    $(box).each(function(){
+        var herf = $(this).attr('href');
+        $(this).attr('href',herf+losc)
+    });
+</script>
 </body>
 </html>
