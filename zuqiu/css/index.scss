@@ -10,14 +10,16 @@
   overflow: hidden;
   img {
     display: block;
-    width: 100%;
   }
   .header {
 
   }
   .background {
     position: absolute;
-    top: 0;
+
+    width: 100%;
+    top: 0px;
+    left: 0px;
     z-index: -1;
   }
   .mainWrap {
@@ -128,6 +130,7 @@
           position: absolute;
           z-index: 10;
           top: 36px;
+          left: 0;
           width: 100%;
           .tabs-wrapper {
             background-color: #fff;

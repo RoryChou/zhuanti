@@ -50,7 +50,7 @@ $(function(){
         s.sliderWidth = s.sliders.eq(0).width();
         s.sliderHeight = s.sliders.eq(0).height();
         s.sliderNUm = s.sliders.index()+1;
-        s.default = {
+        s.defaults = {
           time: 1000,
           btnL: null,
           btnR: null,
@@ -60,11 +60,11 @@ $(function(){
         s.configs = {};
         s.flag = true;
         //是否使用默认配置
-        for(var i in s.default){
+        for(var i in s.defaults){
             if(configs[i]){
                 s.configs[i] = configs[i]
             }else {
-                s.configs[i] = s.default[i]
+                s.configs[i] = s.defaults[i]
             }
         }
 
