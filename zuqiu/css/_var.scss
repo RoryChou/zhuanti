@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*author:rory chou;time:2016.3.1*/
+/*author:rory chou;time:2017.3.1*/
 
 /* CSS Document */
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,select,textarea,p,blockquote,th,td,hr,button,figure,menu{margin:0;padding:0;}
@@ -10,7 +10,7 @@ table{border-collapse:collapse;border-spacing:0;}
 ol,ul{list-style:none;}
 a img{border:none; vertical-align:top;}
 input,button{ font-family:Tahoma,Verdana,Geneva,sans-serif}
-a{ text-decoration:none;}a:hover{ text-decoration: underline;}
+a{ text-decoration:none;}a:hover{}
 i{ font-style:normal;}
 .clearfix { *zoom: 1; }
 .clearfix:after { content: "\0020"; display: block; height: 0; clear: both; overflow: hidden; visibility: hidden; }

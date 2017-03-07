@@ -20,8 +20,11 @@ $(function(){
             $(this).addClass("active").siblings().removeClass("active");
             $(details).eq($(this).index()).addClass("active").siblings().removeClass("active");
             //球票在手时，切换tab重置轮播图
-            if(tabs = '.mWrap .tickets .tabs-desc'){
-                new Swiper('.tickets .active .swiper-container',{
+            if(tabs === '.mWrap .tickets .tabs-desc'){
+                //删除其他的swiper
+                swiperTicket.destroy();
+                //初始化当前swiper
+                swiperTicket = new Swiper('.tickets .active .swiper-container',{
                     btnL:$('.tickets .active .btn-l'),
                     btnR:$('.tickets .active .btn-r')
                 });
@@ -81,6 +84,7 @@ $(function(){
         s.currentIndex=0;
         //下一张
         s.next = function () {
+            //console.log(s.flag)
             if(s.flag){
                 s.flag = false;
                 s.currentIndex++;
@@ -121,7 +125,6 @@ $(function(){
             var btnR = s.configs.btnR || {};
             if(s.configs.btnL){
                 btnL.click(function () {
-                    console.log('last')
                     s.last()
                 })
             }
@@ -139,6 +142,20 @@ $(function(){
             s.container.on('mouseleave',function () {
                 s.autoPlay();
             })
+        };
+        //清除autoplay
+        s.stopAutoplay = function () {
+            clearInterval(s.timer)
+        };
+        //clean css
+        s.cleanCss = function () {
+            s.wrapper.removeAttr('style');
+        };
+        //destroy
+        s.destroy = function () {
+            s.stopAutoplay();
+            s.cleanCss();
+            delete s.flag;
         };
         s.init = function () {
             s.click();
@@ -165,9 +182,20 @@ $(function(){
     });
 
     //球票在手
-    new Swiper('.tickets .active .swiper-container',{
+    var swiperTicket = new Swiper('.tickets .active .swiper-container',{
         btnL:$('.tickets .active .btn-l'),
         btnR:$('.tickets .active .btn-r')
     });
+
+    /*商品hover*/
+    $('.mWrap .product').hover(function () {
+        $(this).find('.buy-btn').css({
+            backgroundColor:'#da2af7'
+        })
+    },function () {
+        $(this).find('.buy-btn').css({
+            backgroundColor:'#ff9400'
+        })
+    })
 });
 
